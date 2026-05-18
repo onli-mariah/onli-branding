@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — FOOTER COMPONENT
+   ─────────────────────────────────────────────────────────────────────────
+   3-column grid (desktop) → 2-column (tablet) → 1-column (mobile).
+   Consistent with Navigation and ScrollStack gutters.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.footer {
+  margin-top: 35px;
+  padding: 24px 0 40px 0;
+  width: 100vw;
+  background-color: var(--surface-light);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 15px;
+  }
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5) var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columnHeader {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+  color: var(--color-text-dark);
+}
+
+.footerLink,
+.footerText {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  color: var(--color-footer-link);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+.footerLink:hover {
+  color: var(--color-text-dark);
+}
+
+.copyrightRow {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.copyrightText {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-sm);
+  color: var(--color-copyright);
+}

@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — HERO COMPONENT
+   ─────────────────────────────────────────────────────────────────────────
+   Centered two-column text layout with generous viewport-based padding.
+   Left text = muted warm gray, right text = dark primary.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface-light);
+  /* Safari-compatible viewport units with fallbacks */
+  padding-top: 30vh;
+  padding-top: 30svh;
+  padding-bottom: 30vh;
+  padding-bottom: 30svh;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.heroLeft {
+  font-family: var(--font-sans);
+  font-size: var(--heading-hero-desktop);
+  color: var(--color-hero-muted);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-heading);
+}
+
+.heroRight {
+  font-family: var(--font-sans);
+  font-size: var(--heading-hero-desktop);
+  color: var(--color-text-dark);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+}
+
+/* Hidden on desktop — line break for mobile */
+.mobileBr {
+  display: none;
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .heroSection {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    text-align: left;
+    padding-top: 20svh;
+    padding-bottom: 10svh;
+  }
+
+  .heroLeft,
+  .heroRight {
+    font-size: var(--heading-hero-mobile);
+  }
+
+  .mobileBr {
+    display: block;
+  }
+}

@@ -1,0 +1,105 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — PILL COMPONENT
+   ─────────────────────────────────────────────────────────────────────────
+   Rounded pill UI elements — used for labels, navigation, CTAs.
+   Light and dark variants. Collapsible dot state for accordions.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Light Pill (default) ───────────────────────────────────────────────── */
+.pill {
+  background-color: var(--color-pill-bg);
+  border-radius: var(--radius-pill);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-pill);
+  transition: all var(--duration-normal) var(--ease-spring);
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .pill {
+    padding: 14px 24px;
+  }
+}
+
+/* ── Dark Pill ──────────────────────────────────────────────────────────── */
+.pillDark {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--duration-normal) var(--ease-spring);
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* ── Collapsed State (dot) ──────────────────────────────────────────────── */
+.pillCollapsed {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  padding: 0;
+  background-color: var(--color-text-body);
+  margin-top: 14px;
+  box-shadow: none;
+}
+
+.pillDark.pillCollapsed {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Label ──────────────────────────────────────────────────────────────── */
+.pillLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-dark);
+  text-transform: lowercase;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .pillLabel {
+    font-size: var(--text-md);
+  }
+}
+
+.pillLabelDark {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  text-transform: lowercase;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.pillLabelCollapsed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Pill Link ──────────────────────────────────────────────────────────── */
+.pillLink {
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: opacity var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.pillLink:hover {
+  opacity: 0.8;
+  transform: translateX(4px);
+}
+
+.pillLink:focus-visible {
+  outline: 2px solid var(--color-text-dark);
+  outline-offset: 2px;
+}

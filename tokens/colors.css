@@ -1,0 +1,39 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — COLOR TOKENS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────────────────────────── */
+  --surface-light: #f6f6f6;
+  --surface-dark:  #2A2A2A;
+
+  /* ── Text ─────────────────────────────────────────────────────────────────── */
+  --color-text-dark:  #171717;
+  --color-text-body:  #6f655c;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #6B6763;
+  --color-hero-muted: #8c857d;
+
+  /* ── UI Elements ──────────────────────────────────────────────────────────── */
+  --color-pill-bg:      #EAEAEA;
+  --color-border-light: #e5e5e5;
+  --color-border-dark:  rgba(255, 255, 255, 0.1);
+  --color-card-dark:    #2A2A2A;
+  --color-card-light:   #FFFFFF;
+
+  /* ── Accent / Feature ─────────────────────────────────────────────────────── */
+  --color-khaki: #7A7060;
+  --color-steel: #6A7070;
+  --color-slate: #5A6068;
+  --color-muted: #6f655c;
+
+  /* ── Preloader ────────────────────────────────────────────────────────────── */
+  --color-preloader-bg: #f4f4f5;
+
+  /* ── Misc ─────────────────────────────────────────────────────────────────── */
+  --color-copyright:  #D4D4D4;
+  --color-footer-link: #A3A3A3;
+
+  /* ── Pill shadow ──────────────────────────────────────────────────────────── */
+  --shadow-pill: 0 1px 4px rgba(0, 0, 0, 0.07);
+}

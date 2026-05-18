@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — GRID & LAYOUT TOKENS
+   ─────────────────────────────────────────────────────────────────────────
+   Three consistent breakpoints:
+     Mobile  : < 768px   → 24px gutters, 1 column
+     Tablet  : 768–1199px → 80px gutters, 2fr 3fr 7fr
+     Desktop : ≥ 1200px  → 32px gutters, 2fr 3fr 7fr, max 1800px
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Grid Columns ─────────────────────────────────────────────────────────── */
+  --grid-cols:      2fr 3fr 7fr;
+  --grid-col-gap:   5px;
+  --grid-row-gap:   24px;
+
+  /* ── Gutters ──────────────────────────────────────────────────────────────── */
+  --gutter-mobile:  24px;
+  --gutter-tablet:  80px;
+  --gutter-desktop: 32px;
+
+  /* ── Container ────────────────────────────────────────────────────────────── */
+  --container-max:  1800px;
+
+  /* ── Breakpoints (reference only — use in media queries) ──────────────────── */
+  /* --bp-tablet:  768px;  */
+  /* --bp-desktop: 1200px; */
+
+  /* ── Radii ────────────────────────────────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-pill:  100px;
+  --radius-full:  999px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION CONTAINER
+   The single source of truth for page-edge gutters. Used by Navigation,
+   Hero, ScrollStack, Footer — every section that needs consistent margins.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.section-container {
+  width: 100%;
+  padding-left: var(--gutter-mobile);
+  padding-right: var(--gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: var(--gutter-tablet);
+    padding-right: var(--gutter-tablet);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-container {
+    padding-left: var(--gutter-desktop);
+    padding-right: var(--gutter-desktop);
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

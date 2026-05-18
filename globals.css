@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ONLI BRAND — GLOBALS
+   ─────────────────────────────────────────────────────────────────────────
+   Single-file import for all design tokens + base reset.
+   Import this one file to get the entire Onli design system.
+
+   Usage:
+     @import 'globals.css';
+   Or:
+     <link rel="stylesheet" href="globals.css" />
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Tokens ─────────────────────────────────────────────────────────────── */
+@import 'tokens/colors.css';
+@import 'tokens/typography.css';
+@import 'tokens/spacing.css';
+@import 'tokens/grid.css';
+@import 'tokens/animation.css';
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESET
+   ═══════════════════════════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
+  overflow-x: clip;
+  background-color: var(--surface-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SAFARI FIXES
+   ═══════════════════════════════════════════════════════════════════════════ */
+@supports (-webkit-touch-callout: none) {
+  .full-height {
+    height: -webkit-fill-available;
+  }
+
+  .sticky-fix {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  .hw-accelerate {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/* ── iOS Safe Area ──────────────────────────────────────────────────────── */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
