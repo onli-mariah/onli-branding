@@ -72,7 +72,7 @@ Component styles are standalone CSS Module-compatible files in `components/`.
 ### UI Elements
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-pill-bg` | `#EAEAEA` | Pill backgrounds |
+| `--color-pill-bg` | `#EFEFEF` | Pill backgrounds |
 | `--color-border-light` | `#e5e5e5` | Light borders, dividers |
 | `--color-border-dark` | `rgba(255,255,255,0.1)` | Borders on dark surfaces |
 | `--color-card-dark` | `#2A2A2A` | Premium card background |
@@ -159,7 +159,7 @@ Component styles are standalone CSS Module-compatible files in `components/`.
 
 ### Navigation
 - Two-pill layout: wordmark pill + CTA/nav pill
-- Pill height: `48px`
+- Pill height: `44px`
 - `z-index: 10`
 - Padding: `24px` top, `16px` bottom
 - Mobile: hamburger menu with drawer (`border-radius: 16px`)

@@ -20,7 +20,7 @@
 .pill {
   background: var(--color-pill-bg);
   border-radius: var(--radius-full);
-  height: 48px;
+  height: 44px;
   display: flex;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -79,8 +79,8 @@
   padding: 12px;
   background: var(--color-pill-bg);
   border-radius: var(--radius-full);
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
